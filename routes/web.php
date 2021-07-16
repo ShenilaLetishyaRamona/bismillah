@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 
 // Use Controller Admin
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\KampusController;
 
 // Use Controller User
 use App\Http\Controllers\Frontend\UserController;
@@ -24,8 +25,16 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     // route backend admin
-    Route::group(['middleware' => 'admin'], function () {
-        Route::get('admin', [AdminController::class, 'index'])->name('admin');
+    Route::group(['prefix' => 'admin' , 'middleware' => 'admin'], function () {
+        Route::get('/', [AdminController::class, 'index'])->name('admin');
+
+        // data kampus
+        Route::get('kampus/data-kampus', [KampusController::class, 'getKampus'])->name('kampus.index');
+        Route::get('kampus/add-kampus', [KampusController::class, 'showFormKampus'])->name('kampus.add');
+        Route::post('kampus/store', [KampusController::class, 'kampusStore'])->name('kampus.store');
+        Route::get('kampus/edit-kampus/{id}', [KampusController::class, 'editKampus'])->name('kampus.edit');
+        Route::put('kampus/update-kampus/{id}', [KampusController::class, 'updateKampus'])->name('kampus.update');
+        Route::delete('kampus/destroy/{id}', [KampusController::class, 'kampusHapus'])->name('kampus.destroy');
     });
 
     // route frontend user

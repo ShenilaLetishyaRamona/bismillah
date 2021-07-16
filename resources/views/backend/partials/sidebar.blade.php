@@ -2,10 +2,28 @@
     <div id="sidebar" class="nav-collapse ">
     <ul class="sidebar-menu">
         <li class="active">
-            <a class="" href="index.html">
+            <a class="" href="{{ route('admin') }}">
                 <i class="icon_house_alt"></i>
                 <span>Dashboard</span>
             </a>
+        </li>
+        <li>
+            <a class="" href="{{ route('kampus.index') }}">
+                <i class="icon_piechart"></i>
+                <span>Data Kampus</span>
+            </a>
+        </li>
+        <li class="sub-menu">
+            <a href="javascript:;" class="">
+                <i class="icon_desktop"></i>
+                <span>d</span>
+                <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
+            <ul class="sub">
+            <li><a class="" href="general.html">Elements</a></li>
+            <li><a class="" href="buttons.html">Buttons</a></li>
+            <li><a class="" href="grids.html">Grids</a></li>
+            </ul>
         </li>
         <li class="sub-menu">
             <a href="javascript:;" class="">
@@ -16,18 +34,6 @@
             <ul class="sub">
             <li><a class="" href="form_component.html">Form Elements</a></li>
             <li><a class="" href="form_validation.html">Form Validation</a></li>
-            </ul>
-        </li>
-        <li class="sub-menu">
-            <a href="javascript:;" class="">
-                <i class="icon_desktop"></i>
-                <span>UI Fitures</span>
-                <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-            <li><a class="" href="general.html">Elements</a></li>
-            <li><a class="" href="buttons.html">Buttons</a></li>
-            <li><a class="" href="grids.html">Grids</a></li>
             </ul>
         </li>
         <li>
