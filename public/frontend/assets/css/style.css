@@ -640,9 +640,14 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 80px 20px;
+  padding: 50px 10px;
   transition: all ease-in-out 0.3s;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  /* width: 80%; */
+}
+
+.service{
+  
 }
 
 .services .icon-box .icon {
@@ -692,7 +697,6 @@ section {
 }
 
 .services .icon-box:hover {
-  background: #cc1616;
   border-color: #cc1616;
   padding: 70px 20px 90px 20px;
 }

@@ -56,8 +56,10 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     // route frontend user
-    Route::group(['middleware' => 'user'], function () {
-        Route::get('user', [UserController::class, 'index'])->name('user');
+    Route::group(['prefix' => 'user', 'middleware' => 'user'], function () {
+        Route::get('/', [UserController::class, 'index'])->name('user');
+
+        Route::get('alumni/{id}/all', [UserController::class, 'getAlumni'])->name('alumni');
     });
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
  
