@@ -16,6 +16,7 @@ class CreateAlumniTable extends Migration
         Schema::create('alumni', function (Blueprint $table) {
             $table->id();
             $table->foreignId('kampus_id')->references('id')->on('kampus')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('foto');
             $table->string('nama_lengkap', 100);
             $table->string('jenis_kelamin', 50);
             $table->text('alamat');
@@ -25,6 +26,7 @@ class CreateAlumniTable extends Migration
             $table->string('alumni', 100);
             $table->string('no_wa', 100);
             $table->string('akun_ig', 100);
+            $table->string('url', 50);
             $table->timestamps();
         });
     }

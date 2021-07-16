@@ -20,7 +20,7 @@
             </a>
         </li>
         <li>
-            <a class="" href="widgets.html">
+            <a class="" href="{{ route('slider.index') }}">
                 <i class="icon_genius"></i>
                 <span>Data Slider</span>
             </a>
