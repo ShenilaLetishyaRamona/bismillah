@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\KampusController;
 use App\Http\Controllers\Backend\AlumniController;
+use App\Http\Controllers\Backend\SliderController;
 
 // Use Controller User
 use App\Http\Controllers\Frontend\UserController;
@@ -47,6 +48,11 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Slider
         Route::get('slider', [SliderController::class, 'getSlider'])->name('slider.index');
+        Route::get('slider/add-slider', [SliderController::class, 'addSlider'])->name('slider.add');
+        Route::post('slider/store', [SliderController::class, 'sliderStore'])->name('slider.store');
+        Route::get('slider/edit-slider/{id}', [SliderController::class, 'editSlider'])->name('slider.edit');
+        Route::put('slider/update-slider/{id}', [SliderController::class, 'updateSlider'])->name('slider.update');
+        Route::delete('slider/destroy/{id}', [SliderController::class, 'sliderHapus'])->name('slider.destroy');
     });
 
     // route frontend user

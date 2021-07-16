@@ -18,8 +18,8 @@
                     <header class="panel-heading">
                         Advanced Table
                     </header><br>
-                    <a href="{{ Route('kampus.add') }}">
-                        <button type="submit" class="btn btn-success btn-sm">Add Slider</button>
+                    <a href="{{ Route('slider.add') }}">
+                        <button type="submit" class="btn btn-success btn-sm">Add Kampus</button>
                     </a>
                         @if ($message = Session::get('success'))
                             <div class="col-lg-4">
@@ -32,17 +32,17 @@
                         <tbody>
                             <tr>
                                 <th>No</th>
-                                <th><i class="icon_profile"></i> Nama Kampus</th>
+                                <th><i class="icon_profile"></i> Title Slider</th>
                                 <th><i class="icon_calendar"></i> Gambar</th>
                                 <th><i class="icon_cogs"></i> Action</th>
                             </tr>
                             @foreach($post as $k)
                             <tr>
                                 <td class="text-center">{{ ++$i }}</td>
-                                <td>{{ $k->nama_kampus }}</td>
-                                <td><img src="{{ asset('images/kampus/'.$k->logo) }}" alt="{{ $k->nama_kampus }}" width="100px"></td>
+                                <td>{{ $k->title_slider }}</td>
+                                <td><img src="{{ asset('images/slider/'.$k->image) }}" alt="{{ $k->title_slider }}" width="100px"></td>
                                 <td>
-                                    <form action="{{ route('kampus.destroy',$k->id) }}" method="post">
+                                    <form action="{{ route('slider.destroy',$k->id) }}" method="post">
 
                                         <a class="btn btn-primary btn-sm" href="{{ route('slider.edit',$k->id) }}">Edit</a>
 
