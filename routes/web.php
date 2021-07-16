@@ -46,7 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::delete('alumni/destroy/{id}', [AlumniController::class, 'alumniHapus'])->name('alumni.destroy');
 
         // Slider
-        Route::get('slider', [SliderController::class, 'getSlider'])->name('slider.')
+        Route::get('slider', [SliderController::class, 'getSlider'])->name('slider.index');
     });
 
     // route frontend user
