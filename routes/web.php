@@ -39,8 +39,14 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('alumni', [AlumniController::class, 'getKampus'])->name('alumni.index');
         Route::get('alumni/data-alumni/{id}',[AlumniController::class, 'getAlumni'])->name('alumni.home');
-       
-        
+        Route::get('alumni/add-alumni/{id}',[AlumniController::class, 'addAlumni'])->name('alumni.add');
+        Route::post('alumni/store',[AlumniController::class, 'alumniStore'])->name('alumni.store'); 
+        Route::get('alumni/edit-alumni/{id}', [AlumniController::class, 'editAlumni'])->name('alumni.edit');
+        Route::put('alumni/update-alumni/{id}', [AlumniController::class, 'updateAlumni'])->name('alumni.update');
+        Route::delete('alumni/destroy/{id}', [AlumniController::class, 'alumniHapus'])->name('alumni.destroy');
+
+        // Slider
+        Route::get('slider', [SliderController::class, 'getSlider'])->name('slider.')
     });
 
     // route frontend user
