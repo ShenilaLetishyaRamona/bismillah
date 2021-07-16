@@ -12,7 +12,6 @@
     <link href="{{ URL::asset('backend/css/font-awesome.min.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('backend/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('backend/assets/fullcalendar/fullcalendar/fullcalendar.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('backend/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css') }}" rel="stylesheet" type="text/css" media="screen" />
     <link rel="stylesheet" href="{{ URL::asset('backend/css/owl.carousel.css') }}" type="text/css">
     <link href="{{ URL::asset('backend/css/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('backend/css/fullcalendar.css') }}">
@@ -55,8 +54,6 @@
     <script src="{{ URL::asset('backend/js/jquery.rateit.min.js') }}"></script>
     <script src="{{ URL::asset('backend/js/jquery.customSelect.min.js') }}"></script>
     <script src="{{ URL::asset('backend/js/scripts.js') }}"></script>
-    <script src="{{ URL::asset('backend/js/sparkline-chart.js') }}"></script>
-    <script src="{{ URL::asset('backend/js/easy-pie-chart.js') }}"></script>
     <script src="{{ URL::asset('backend/js/jquery-jvectormap-1.2.2.min.js') }}"></script>
     <script src="{{ URL::asset('backend/js/jquery-jvectormap-world-mill-en.js') }}"></script>
     <script src="{{ URL::asset('backend/js/xcharts.min.js') }}"></script>

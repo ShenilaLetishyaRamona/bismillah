@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 // Use Controller Admin
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\KampusController;
+use App\Http\Controllers\Backend\AlumniController;
 
 // Use Controller User
 use App\Http\Controllers\Frontend\UserController;
@@ -35,6 +36,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('kampus/edit-kampus/{id}', [KampusController::class, 'editKampus'])->name('kampus.edit');
         Route::put('kampus/update-kampus/{id}', [KampusController::class, 'updateKampus'])->name('kampus.update');
         Route::delete('kampus/destroy/{id}', [KampusController::class, 'kampusHapus'])->name('kampus.destroy');
+
+        Route::get('alumni', [AlumniController::class, 'getKampus'])->name('alumni.index');
+        Route::get('alumni/data-alumni/{id}',[AlumniController::class, 'getAlumni'])->name('alumni.home');
+       
+        
     });
 
     // route frontend user
