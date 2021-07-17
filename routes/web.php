@@ -58,8 +58,15 @@ Route::group(['middleware' => 'auth'], function () {
     // route frontend user
     Route::group(['prefix' => 'user', 'middleware' => 'user'], function () {
         Route::get('/', [UserController::class, 'index'])->name('user');
+        Route::get('alumni', [UserController::class, 'alumni'])->name('data.alumni');
 
         Route::get('alumni/{id}/all', [UserController::class, 'getAlumni'])->name('alumni');
+        Route::get('alumni/{id}/detail', [UserController::class, 'detailAlumni'])->name('detail.alumni');
+        Route::get('/search/{id}', [UserController::class, 'search'])->name('search');
+
+        Route::get('s/{id}/profile/', [UserController::class, 'detailProfile'])->name('detail.profile');
+        Route::get('u/{id}/profile/', [UserController::class, 'editProfile'])->name('edit.profile');
+        Route::put('p/{id}/profile/', [UserController::class, 'storeProfile'])->name('profile.store');
     });
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
  

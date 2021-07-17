@@ -650,9 +650,24 @@ section {
   /* width: 80%; */
 }
 
-.service{
-  
+
+#box-image{
+  height:220px;
 }
+
+.card-img{
+  width:180px; height:200px; margin-top:-40px
+}
+
+@media (max-width: 575px){
+  #box-text{
+    float: left;
+  }
+
+  #box-image{
+    width: 200%;
+  }
+} 
 
 .services .icon-box .icon {
   margin: 0 auto;
