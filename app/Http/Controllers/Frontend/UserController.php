@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Kampus;
+use App\Models\Slider;
 use Auth;
 
 class UserController extends Controller
@@ -13,7 +14,8 @@ class UserController extends Controller
     public function index()
     {
         $post = Kampus::all();
-        return view('frontend.beranda', compact('post'));
+        $slider = Slider::all();
+        return view('frontend.beranda', compact('post', 'slider'));
     }
 
     public function getAlumni($id)
