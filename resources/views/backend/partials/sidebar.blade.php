@@ -25,6 +25,12 @@
                 <span>Data Slider</span>
             </a>
         </li>
+        <li>
+            <a class="" href="{{ route('user.index') }}">
+                <i class="icon_desktop"></i>
+                <span>Data User</span>
+            </a>
+        </li>
     </ul>
     </div>
 </aside>

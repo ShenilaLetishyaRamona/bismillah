@@ -53,6 +53,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('slider/edit-slider/{id}', [SliderController::class, 'editSlider'])->name('slider.edit');
         Route::put('slider/update-slider/{id}', [SliderController::class, 'updateSlider'])->name('slider.update');
         Route::delete('slider/destroy/{id}', [SliderController::class, 'sliderHapus'])->name('slider.destroy');
+
+        // admin
+        Route::get('user', [AdminController::class, 'getUser'])->name('user.index');
+        Route::delete('user/destroy/{id}', [AdminController::class, 'userHapus'])->name('user.destroy');
     });
 
     // route frontend user
