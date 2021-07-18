@@ -20,13 +20,21 @@
           <p>Data Alumni Kampus {{ $kampus->nama_kampus }}</p>
         </div>
 
-        <form class="form" method="get" action="{{ route('search', $kampus->id ) }}">
-          <div class="form-group w-100 mb-3">
-              <label for="search" class="d-block mr-2">Pencarian</label>
-              <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan Nama Alumni">
-              <button type="submit" class="btn btn-primary mb-1">Cari</button>
+        <?php $count = count($post) ?>
+        @if(empty($count))
+          <div class="col-lg-12">
+            <div class="alert alert-danger">
+                <p>Data Alumni Kampus {{ $kampus->nama_kampus }} Kosong</p>
+            </div>
           </div>
-        </form>
+        @endif
+        <form class="form" method="get" action="{{ route('search', $kampus->id ) }}">
+            <div class="form-group w-100 mb-3">
+                <label for="search" class="d-block mr-2">Pencarian</label>
+                <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan Nama Alumni">
+                <button type="submit" class="btn btn-primary mb-1">Cari</button>
+            </div>
+          </form>
         <div class="row">
           @foreach($post as $a)
             <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5 d-flex align-items-stretch" data-aos="fade-up">
@@ -51,14 +59,6 @@
                 </div>
             </div>
           @endforeach
-          <?php $count = count($post) ?>
-          @if(empty($count))
-            <div class="col-lg-12">
-              <div class="alert alert-danger">
-                  <p>Data Alumni Kampus {{ $kampus->nama_kampus }} Kosong</p>
-              </div>
-            </div>
-          @endif
         </div>
 
         <br><br>
