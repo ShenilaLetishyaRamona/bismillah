@@ -19,7 +19,7 @@
                         Advanced Table
                     </header><br>
                     <a href="{{ Route('slider.add') }}">
-                        <button type="submit" class="btn btn-success btn-sm">Add Kampus</button>
+                        <button type="submit" class="btn btn-success btn-sm">Add Slider</button>
                     </a>
                         @if ($message = Session::get('success'))
                             <div class="col-lg-4">
@@ -54,8 +54,16 @@
                                 </td>
                             </tr>
                             @endforeach
+                            <?php $count = count($post) ?>
+                            @if(empty($count))
+                                <td colspan="4" class="text-center">Data Slider Kosong</td>
+                            @endif
                         </tbody>
                     </table>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        {!! $post->links() !!}
+                    </div>
                 </section>
             </div>
         </div>

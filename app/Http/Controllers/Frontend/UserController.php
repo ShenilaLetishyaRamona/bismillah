@@ -35,7 +35,7 @@ class UserController extends Controller
         $kampus = Kampus::find($id);
         $post = DB::table('kampus')->join('alumni', 'kampus.id', '=', 'alumni.kampus_id')
                     ->where('kampus_id', $id)
-                    ->get();
+                    ->paginate(10);
         return view('frontend.alumni', compact('post', 'kampus'));
     }
 

@@ -26,7 +26,7 @@ class AlumniController extends Controller
         $kampus = Kampus::find($id);
         $alumni = DB::table('kampus')->join('alumni', 'kampus.id', '=', 'alumni.kampus_id')
                 ->where('kampus_id', $id)
-                ->get();
+                ->paginate(10);
         return view('backend.alumni.home', compact('kampus', 'alumni'));
     }
 
@@ -93,7 +93,7 @@ class AlumniController extends Controller
 
         $post = Alumni::create($insert);
 
-        return redirect()->route('alumni.index')
+        return redirect()->route('alumni.home', $kampus_id)
                          ->with('success', 'Data Berhasil Disimpan');
     }
 
@@ -142,7 +142,10 @@ class AlumniController extends Controller
             if($extension == 'jpeg' || $extension == 'png' || $extension == 'jpg'){
                 if($foto = $request->file('foto')){
                     $post = Alumni::find($id);
-                    unlink("images/alumni/".$post->foto);
+                    $file_path = public_path("images/alumni/".$post->foto);
+                    if(file_exists($file_path)){
+                        unlink($file_path);
+                    }
 
                     $namefoto = $foto->getClientOriginalName();
                     $nameSave = md5(date('d-m-Y H:i:s')).'.'.$extension;
@@ -186,19 +189,23 @@ class AlumniController extends Controller
 
         $post = Alumni::where('id', $id)->update($update);
 
-        return redirect()->route('alumni.index')
+        return redirect()->route('alumni.home', $kampus_id)
                          ->with('success', 'Data Berhasil Disimpan');
     }
 
     public function alumniHapus($id)
     {
         $post = Alumni::find($id);
-
-        unlink("images/alumni/".$post->foto);
-        Alumni::where('id', $post->id)->delete();
+        $file_path = public_path("images/alumni/".$post->foto);
+        if(file_exists($file_path)){
+            unlink($file_path);
+            Alumni::where('id', $post->id)->delete();
+        }else{
+            Alumni::where('id', $post->id)->delete(); 
+        }
   
-        return redirect()->route('alumni.index')
-                        ->with('success','Data Kampus Berhasil di Delete');
+        return redirect()->route('alumni.home', $post->kampus_id)
+                        ->with('success','Data Alumni Berhasil di Delete');
     }
 
 }

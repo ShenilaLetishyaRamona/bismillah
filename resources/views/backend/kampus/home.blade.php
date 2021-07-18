@@ -16,10 +16,10 @@
             <div class="col-lg-8">
                 <section class="panel">
                     <header class="panel-heading">
-                        Advanced Table
+                        Data Kampus
                     </header><br>
                     <a href="{{ Route('kampus.add') }}">
-                        <button type="submit" class="btn btn-success btn-sm">Add Slider</button>
+                        <button type="submit" class="btn btn-success btn-sm">Add Kampus</button>
                     </a>
                         @if ($message = Session::get('success'))
                             <div class="col-lg-4">
@@ -44,7 +44,7 @@
                                 <td>
                                     <form action="{{ route('kampus.destroy',$k->id) }}" method="post">
 
-                                        <a class="btn btn-primary btn-sm" href="{{ route('slider.edit',$k->id) }}">Edit</a>
+                                        <a class="btn btn-primary btn-sm" href="{{ route('kampus.edit',$k->id) }}">Edit</a>
 
                                         @csrf
                                         @method('DELETE')
@@ -54,8 +54,15 @@
                                 </td>
                             </tr>
                             @endforeach
+                            <?php $count = count($post) ?>
+                            @if(empty($count))
+                                <td colspan="4" class="text-center">Data Kampus Kosong</td>
+                            @endif
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {!! $post->links() !!}
+                    </div>
                 </section>
             </div>
         </div>

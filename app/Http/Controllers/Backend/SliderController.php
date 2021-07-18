@@ -87,7 +87,10 @@ class SliderController extends Controller
             if($extension == 'jpeg' || $extension == 'png' || $extension == 'jpg'){
                 if($image = $request->file('image')){
                     $post = Slider::find($id);
-                    unlink("images/slider/".$post->image);
+                    $file_path = public_path("images/slider/".$post->image);
+                    if(file_exists($file_path)){
+                        unlink($file_path);
+                    }
 
                     $nameimage = $image->getClientOriginalName();
                     $nameSave = md5(date('d-m-Y H:i:s')).'.'.$extension;
@@ -121,10 +124,14 @@ class SliderController extends Controller
     {
         $post = Slider::find($id);
 
-        unlink("images/slider/".$post->image);
-        Slider::where('id', $post->id)->delete();
+        if(file_exists(public_path()."images/slider/".$post->image)){
+            unlink("images/slider/".$post->image);
+            Slider::where('id', $post->id)->delete();
+        }else{
+            Slider::where('id', $post->id)->delete();   
+        }
   
         return redirect()->route('slider.index')
-                        ->with('success','Data Kampus Berhasil di Delete');
+                        ->with('success','Data Slider Berhasil di Delete');
     }
 }

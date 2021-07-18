@@ -51,6 +51,19 @@
                 </div>
             </div>
           @endforeach
+          <?php $count = count($post) ?>
+          @if(empty($count))
+            <div class="col-lg-12">
+              <div class="alert alert-danger">
+                  <p>Data Alumni Kampus {{ $kampus->nama_kampus }} Kosong</p>
+              </div>
+            </div>
+          @endif
+        </div>
+
+        <br><br>
+        <div class="d-flex justify-content-center">
+            {{ $post->links() }}
         </div>
 
       </div>

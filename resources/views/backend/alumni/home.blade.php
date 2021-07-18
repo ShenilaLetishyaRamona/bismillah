@@ -68,8 +68,15 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            <?php $count = count($alumni) ?>
+                            @if(empty($count))
+                                <td colspan="4" class="text-center">Data Alumni Kosong</td>
+                            @endif
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $alumni->links() }}
+                    </div>
                 </section>
             </div>
         </div>

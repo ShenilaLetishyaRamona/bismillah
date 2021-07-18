@@ -68,6 +68,14 @@
             </div>
           </div>
           @endforeach
+          <?php $count = count($post) ?>
+          @if(empty($count))
+            <div class="col-lg-12">
+                <div class="alert alert-danger">
+                    <p>Data Kampus Kosong</p>
+                </div>
+            </div>
+          @endif
         </div>
 
       </div>

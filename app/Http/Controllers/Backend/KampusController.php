@@ -86,7 +86,10 @@ class KampusController extends Controller
             if($extension == 'jpeg' || $extension == 'png' || $extension == 'jpg'){
                 if($logo = $request->file('logo')){
                     $post = Kampus::find($id);
-                    unlink("images/kampus/".$post->logo);
+                    $file_path = public_path("images/kampus/".$post->logo);
+                    if(file_exists($file_path)){
+                        unlink($file_path);
+                    }
 
                     $nameLogo = $logo->getClientOriginalName();
                     $nameSave = md5(date('d-m-Y H:i:s')).'.'.$extension;
@@ -121,9 +124,13 @@ class KampusController extends Controller
     public function kampusHapus($id)
     {
         $post = Kampus::find($id);
-
-        unlink("images/kampus/".$post->logo);
-        Kampus::where('id', $post->id)->delete();
+        $file_path = public_path("images/kampus/".$post->logo);
+        if(file_exists($file_path)){
+            unlink($file_path);
+            Kampus::where('id', $post->id)->delete();
+        }else{
+            Kampus::where('id', $post->id)->delete();  
+        }
   
         return redirect()->route('kampus.index')
                         ->with('success','Data Kampus Berhasil di Delete');

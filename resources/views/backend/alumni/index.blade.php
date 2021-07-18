@@ -13,6 +13,14 @@
 @section('content')
     <section class="wrapper">
         <div class="row">
+            <?php $count = count($post) ?>
+            @if (empty($count))
+                <div class="col-lg-12">
+                    <div class="alert alert-danger">
+                        <p>Data Alumni Kosong. Silahkan isi data kampus terlebih dahulu!</p>
+                    </div>
+                </div>
+            @endif
             @foreach($post as $k)
                 <div class="col-md-3 col-sm-2 col-xs-12">
                     <div class="thumbnail" style="width:80%;">

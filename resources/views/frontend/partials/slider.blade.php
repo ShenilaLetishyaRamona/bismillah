@@ -9,7 +9,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" class="d-block w-100" alt="...">
+      <img src="{{ URL::asset('images/slider/default-slider.png') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Home</h5>
       </div>
