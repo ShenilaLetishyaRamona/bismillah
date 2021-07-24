@@ -16,45 +16,45 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box blue-bg">
                     <i class="fa fa-cloud-download"></i>
-                    <div class="count">100</div>
-                    <div class="title">Data Alumni Kuliah</div>
+                    <div class="count">11</div>
+                    <div class="title">Data Kampus</div>
                 </div>
-                <!--/.info-box-->
+                <!-- /.info-box -->
             </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> 
             <div class="info-box brown-bg">
               <i class="fa fa-shopping-cart"></i>
-              <div class="count">7.538</div>
-              <div class="title">Data Siswa</div>
+              <div class="count">100</div>
+              <div class="title">Data Alumni</div>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> 
             <div class="info-box dark-bg">
               <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">4.362</div>
-              <div class="title">Order</div>
+              <div class="count">10</div>
+              <div class="title">Data Slider</div>
             </div>
             <!--/.info-box-->
           </div>
-          <!--/.col-->
+          <!-- /.col -->
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
               <i class="fa fa-cubes"></i>
-              <div class="count">1.426</div>
-              <div class="title">Stock</div>
+              <div class="count">User</div>
+              <div class="title">5</div>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
         </div>
-        <!--/.row-->
+        <!--/.row
 
         
         <div class="row">
@@ -80,9 +80,9 @@
             <ul class="today-datas">
               <!-- List #1 -->
               <li>
-                <!-- Graph -->
+                <!-- Graph 
                 <div><span id="todayspark1" class="spark"></span></div>
-                <!-- Text -->
+                <!-- Text 
                 <div class="datas-text">11,500 visitors/day</div>
               </li>
               <li>
@@ -108,7 +108,7 @@
         </div>
 
 
-        <!-- Today status end -->
+        <!-- Today status end 
 
 
 
@@ -263,7 +263,7 @@
             </div>
 
           </div>
-          <!--/col-->
+          <!--/col
           <div class="col-md-3">
 
             <div class="social-box facebook">
@@ -279,7 +279,7 @@
                 </li>
               </ul>
             </div>
-            <!--/social-box-->
+            <!--/social-box
           </div>
           <div class="col-md-3">
 
@@ -299,7 +299,7 @@
             <!--/social-box-->
 
           </div>
-          <!--/col-->
+          <!--/col
           <div class="col-md-3">
 
             <div class="social-box twitter">
@@ -332,7 +332,7 @@
         <!-- project team & activity start -->
         <div class="row">
           <div class="col-md-4 portlets">
-            <!-- Widget -->
+            <!-- Widget 
             <div class="panel panel-default">
               <div class="panel-heading">
                 <div class="pull-left">Message</div>
@@ -357,7 +357,7 @@
                       </div>
 
                       <div class="chat-content">
-                        <!-- In meta area, first include "name" and then "time" -->
+                        <!-- In meta area, first include "name" and then "time" 
                         <div class="chat-meta">John Smith <span class="pull-right">3 hours ago</span></div>
                         Vivamus diam elit diam, consectetur dapibus adipiscing elit.
                         <div class="clearfix"></div>
@@ -372,7 +372,7 @@
                       </div>
 
                       <div class="chat-content">
-                        <!-- In the chat meta, first include "time" then "name" -->
+                        <!-- In the chat meta, first include "time" then "name" 
                         <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
                         Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit.
                         <div class="clearfix"></div>
@@ -398,7 +398,7 @@
                       </div>
 
                       <div class="chat-content">
-                        <!-- In the chat meta, first include "time" then "name" -->
+                        <!-- In the chat meta, first include "time" then "name" 
                         <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
                         Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
                         <div class="clearfix"></div>
@@ -408,7 +408,7 @@
                   </ul>
 
                 </div>
-                <!-- Widget footer -->
+                <!-- Widget footer 
                 <div class="widget-foot">
 
                   <form class="form-inline">
@@ -427,7 +427,7 @@
           </div>
 
           <div class="col-lg-8">
-            <!--Project Activity start-->
+            <!--Project Activity start
             <section class="panel">
               <div class="panel-body progress-panel">
                 <div class="row">
@@ -553,7 +553,7 @@
           </div>
         </div><br><br>
 
-        <div class="row">
+        <!-- <div class="row"> 
           <div class="col-md-6 portlets">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -567,7 +567,7 @@
               <div class="panel-body">
                 <!-- Widget content -->
 
-                <!-- Below line produces calendar. I am using FullCalendar plugin. -->
+                <!-- Below line produces calendar. I am using FullCalendar plugin. 
                 <div id="calendar"></div>
 
               </div>
@@ -575,7 +575,7 @@
 
           </div>
 
-          <div class="col-md-6 portlets">
+          <!-- <div class="col-md-6 portlets">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <div class="pull-left">Quick Post</div>
@@ -589,23 +589,23 @@
                 <div class="padd">
 
                   <div class="form quick-post">
-                    <!-- Edit profile form (not working)-->
+                    <!-- Edit profile form (not working
                     <form class="form-horizontal">
-                      <!-- Title -->
+                      <!-- Title 
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Title</label>
                         <div class="col-lg-10">
                           <input type="text" class="form-control" id="title">
                         </div>
                       </div>
-                      <!-- Content -->
+                      <!-- Content 
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="content">Content</label>
                         <div class="col-lg-10">
                           <textarea class="form-control" id="content"></textarea>
                         </div>
                       </div>
-                      <!-- Cateogry -->
+                      <!-- Cateogry 
                       <div class="form-group">
                         <label class="control-label col-lg-2">Category</label>
                         <div class="col-lg-10">
@@ -618,7 +618,7 @@
                                                 </select>
                         </div>
                       </div>
-                      <!-- Tags -->
+                      <!-- Tags 
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="tags">Tags</label>
                         <div class="col-lg-10">
@@ -626,9 +626,9 @@
                         </div>
                       </div>
 
-                      <!-- Buttons -->
+                      <!-- Buttons
                       <div class="form-group">
-                        <!-- Buttons -->
+                        <!-- Buttons
                         <div class="col-lg-offset-2 col-lg-9">
                           <button type="submit" class="btn btn-primary">Publish</button>
                           <button type="submit" class="btn btn-danger">Save Draft</button>
